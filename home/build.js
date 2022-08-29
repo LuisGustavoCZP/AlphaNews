@@ -26,7 +26,7 @@ export function createNotice (noticeData)
 export class Notice extends HTMLLIElement
 {
     #onconnected;
-    constructor ({id, titulo, resumo, noticia_completa, categoria, fonte, imagem})
+    constructor ({id, titulo, resumo, link, categoria, fonte, imagem})
     {
         super();
         const div = document.createElement("div");
@@ -39,7 +39,7 @@ export class Notice extends HTMLLIElement
         {
             this.appendChild(div);
             this.appendChild(img);
-            this.onclick = () => {location.assign(noticia_completa);}
+            this.onclick = () => {location.assign(link);}
         }
     }
 
