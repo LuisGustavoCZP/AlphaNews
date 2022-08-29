@@ -13,13 +13,14 @@ async function buildCreateNews ()
         fields.forEach(field => 
         {
             data[field.name] = field.value;
-        })
+        });
 
         const options = {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
-            }    
+            },
+            body: JSON.stringify(data)
         };
         await fetch("/news", options).then(resp => resp.json()).catch(err => {console.log(err); return undefined});
     }
