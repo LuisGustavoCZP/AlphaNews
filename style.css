@@ -36,3 +36,8 @@ footer {
     height: 48px;
     background-color: var(--back-mid);
 }
+
+main {
+    display: flex;
+    justify-content: center;
+}
