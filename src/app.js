@@ -3,7 +3,7 @@ const newsListElement = document.getElementById("news-list");
 
 async function loadNews ()
 {
-    const resp = await fetch("https://kenzie-news-api.herokuapp.com/api/news")
+    const resp = await fetch("/news")
     .then(resp => resp.json()).catch(err => {console.log(err); return undefined});
 
     console.log(resp);
