@@ -19,6 +19,7 @@
     overflow: hidden;
     cursor: pointer;
     transition: box-shadow .3s, transform .3s;
+    justify-content: space-between;
 }
 
 #news-list > li:hover {
