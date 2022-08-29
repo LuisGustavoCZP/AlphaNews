@@ -9,6 +9,7 @@
     align-items: stretch;
     flex-wrap: wrap;
     max-width: 1270px;
+    width: 100%;
 }
 
 #news-list > li {
