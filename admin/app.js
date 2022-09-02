@@ -22,14 +22,16 @@ async function buildCreateNews ()
             },
             body: JSON.stringify(data)
         };
+
         const resp = await fetch("/news", options)
+        .then(resp => resp.json())
         .catch(err => 
         {
             console.log("deu erro", err);
             return undefined;
-        })
-        .then(resp => resp.json())
-        
+        });
+
+        if(resp.messages) console.log(resp.messages);
     }
 }
 
