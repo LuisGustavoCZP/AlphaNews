@@ -39,7 +39,7 @@ export class Notice extends HTMLLIElement
         {
             this.appendChild(div);
             this.appendChild(img);
-            this.onclick = () => {location.assign(link);}
+            this.onclick = () => {window.open(link, '_blank');}
         }
     }
 
