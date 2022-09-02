@@ -22,18 +22,13 @@ async function buildCreateNews ()
             },
             body: JSON.stringify(data)
         };
-        try {
-            await fetch("/news", options)
-            .then(resp => resp.json())
-            .catch(err => 
-            {
-                console.log(err);
-                return undefined
-            });
-        } catch (error) {
-            
-        }
-        
+        const resp = await fetch("/news", options)
+        .then(resp => resp.json())
+        .catch(err => 
+        {
+            console.log(err);
+            return undefined;
+        });
     }
 }
 
