@@ -25,7 +25,6 @@ async function buildCreateNews ()
 
         const resp = await fetch("/news", options)
         .then(resp => resp.json())
-        .then(resp => resp)
         .catch(err => 
         {
             console.log("deu erro", err);
