@@ -22,7 +22,18 @@ async function buildCreateNews ()
             },
             body: JSON.stringify(data)
         };
-        await fetch("/news", options).then(resp => resp.json()).catch(err => {console.log(err); return undefined});
+        try {
+            await fetch("/news", options)
+            .then(resp => resp.json())
+            .catch(err => 
+            {
+                console.log(err);
+                return undefined
+            });
+        } catch (error) {
+            
+        }
+        
     }
 }
 
