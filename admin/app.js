@@ -23,23 +23,15 @@ async function buildCreateNews ()
             body: JSON.stringify(data)
         };
 
-        try 
+        const resp = await fetch("/news", options)
+        .then(resp => resp.json())
+        .catch(err => 
         {
-            const resp = await fetch("/news", options)
-            .then(resp => resp.json())
-            .catch(err => 
-            {
-                console.log("deu erro", err);
-                return undefined;
-            });
+            console.log("deu erro", err);
+            return undefined;
+        });
 
-            if(resp.messages) console.log(resp.messages);
-        } 
-        catch (error)
-        {
-            
-        }
-        
+        if(resp.messages) console.log(resp.messages);
     }
 }
 
