@@ -26,7 +26,7 @@ async function buildCreateNews ()
         .then(resp => resp.json())
         .catch(err => 
         {
-            console.log(err);
+            console.log("deu erro", err);
             return undefined;
         });
     }
