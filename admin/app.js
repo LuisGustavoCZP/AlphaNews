@@ -31,7 +31,10 @@ async function buildCreateNews ()
             return undefined;
         });
 
-        if(resp.messages) console.log(resp.messages);
+        if(resp.messages) 
+        {
+            console.log(resp.messages);
+        }
     }
 }
 
